@@ -2,7 +2,8 @@
     "name": "DeepWiki Open DevContainer",
     "image": "mcr.microsoft.com/devcontainers/python:3.12",
     "forwardPorts": [
-        3000
+        3000,
+        8001
     ],
     "postCreateCommand": "pip install -r api/requirements.txt && npm install -g npm && corepack enable && corepack prepare yarn@stable --activate && npm install",
     "postStartCommand": "echo '\n# 1. Create a `.env` file '\necho '# 2. Start the API server'\necho 'python -m api.main'\necho '# 3. Start the web app'\necho 'npm run dev\n'",
